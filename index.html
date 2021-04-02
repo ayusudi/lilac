@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/tailwind.css" rel="stylesheet">
+  <title>ToDo (Demo Vue Directive)</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  input:focus {
+    outline: none;
+  }
+  input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+</style>
+<body class="bg-purple-300">
+      <div class="box-border md:box-content bg-white m-14 h-64 grid grid-cols-1 md:grid-cols-6 rounded" id="app">
+        <div class="form bg-purple-100 col-span-2 rounded-l p-5">
+          <input-component v-bind="{ label : 'Email', type : 'text', size : 25 }"></input-component>
+          <input-component v-bind="{ label : 'Password', type : 'password', size : 21 }"></input-component>
+        </div>
+        <div class="image col-span-3">
+          <h1 v-text="msg"></h1>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
