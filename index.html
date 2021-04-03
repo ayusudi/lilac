@@ -16,21 +16,32 @@
     outline: none;
   }
   input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-}
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+  }
+  .button-component {
+    border: outset;
+    border-color: #bccafa;
+    cursor: pointer;
+  }
+  .button-component:active {
+    border: inset;
+    border-color: #b3c3f8;
+  }
 </style>
 <body class="bg-purple-300">
       <div class="box-border md:box-content bg-white m-14 h-64 grid grid-cols-1 md:grid-cols-6 rounded" id="app">
         <div class="form bg-purple-100 col-span-2 rounded-l p-5">
-          <input-component v-bind="{ label : 'Email', type : 'text', size : 25 }"></input-component>
-          <input-component v-bind="{ label : 'Password', type : 'password', size : 21 }"></input-component>
+          <form action="post" method="post" class="flex flex-col items-center">
+            <input-component v-bind="{ label : 'Email', type : 'text', size : 25 }"></input-component>
+            <input-component v-bind="{ label : 'Password', type : 'password', size : 21 }"></input-component>
+            <input type="submit" class="button-component py-0.5 px-2 rounded bg-indigo-200 my-2 text-sm w-16" value="Login">
+          </form>
         </div>
         <div class="image col-span-3">
           <h1 v-text="msg"></h1>
-
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
