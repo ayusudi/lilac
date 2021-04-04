@@ -13,10 +13,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "dayjs": "^1.8.27",
     "vue": "^2.6.12",
-    "vue-hot-reload-api": "^2.3.4",
-    "vue-tailwind-picker": "^2.0.0",
     "vue2-datepicker": "^3.9.0"
   }
 }
